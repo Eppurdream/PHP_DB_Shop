@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<?PHP
+	require "init.php";
+
+	$ret_post = $_POST;
+	$user_id = $ret_post["user_id"];
+	$update_value = $ret_post["update_value"];
+	
+	$dbo = mysqli_connect("localhost", "root", "autoset", "gppj") or die("eeeee");
+
+	$query = "Update users set money = " . $update_value . " where id = " . $user_id;
+
+	$users_dbo = mysqli_query($dbo, $query) or die("뭔가 문제가 생겼어요");
+
+	mysqli_close($dbo);
+	
+	echo "성공적";
+?>

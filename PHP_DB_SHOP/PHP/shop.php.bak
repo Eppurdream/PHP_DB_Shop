@@ -1,0 +1,5 @@
+<?PHP
+	require "init.php"
+
+	$dbo = mysqli_connect("localhost", "root", "autoset", "gppj");
+?>
